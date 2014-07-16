@@ -32,7 +32,7 @@ body {
 }
 
 /* Customize container */
-@media (min-width: @screen-lg-min) {
+@media (min-width: @screen-lg-min) and (max-width: @screen-lg-max) {
   .container {
     max-width: @screen-lg-min;
   }
@@ -76,4 +76,9 @@ body {
   .jumbotron {
     border-bottom: 0;
   }
+}
+
+/* My own specifications */
+.ranks {
+    width: 15px;
 }
