@@ -16,151 +16,1081 @@
     den Gesamtaspekt. Bewerten Se z.B. mit einer 3, wenn der eine Aspekt gar nicht und der andere immer gegeben wäre.
 </div>
 <br>
-<div>
-    <h4>
-        <small style="color: limegreen">BITTE KREUZEN SIE ZUTREFENDES AN:</small>
-    </h4>
-    Die Aussage...
-    <ol>
-        <li>... trifft <b>sehr selten</b> zu</li>
-        <li>... trifft <b>selten</b> zu</li>
-        <li>... trifft <b>manchmal</b> zu</li>
-        <li>... trifft <b>oft</b> zu</li>
-        <li>... trifft <b>sehr häufig</b> zu</li>
-    </ol>
+<br>
+<div ng-controller="WorkshopCtrl">
+<form class="form">
+<div class="row">
+    <div class="form-group">
+        <div class="col-md-6">
+            <div class="form-group">
+                <div class="form">
+                    <h4>
+                        <small style="color: limegreen">BITTE KREUZEN SIE ZUTREFENDES AN:</small>
+                    </h4>
+                    Die Aussage ...
+                    <ol>
+                        <li>... trifft <b>sehr selten</b> zu</li>
+                        <li>... trifft <b>selten</b> zu</li>
+                        <li>... trifft <b>manchmal</b> zu</li>
+                        <li>... trifft <b>oft</b> zu</li>
+                        <li>... trifft <b>sehr häufig</b> zu</li>
+                    </ol>
+                </div>
+                <br>
+            </div>
+        </div>
+        <div class="col-md-6">
+            Lorem Ipsum is simply dummy text of the <b>PLACEHOLDER FOR SVG</b> and typesetting industry. Lorem Ipsum has
+            been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+            and
+            scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+            leap
+            into
+            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+            release of
+            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
+            like
+            Aldus PageMaker including versions of Lorem Ipsum.<br>
+            Lorem Ipsum is simply dummy text of the <b>PLACEHOLDER FOR SVG</b> and typesetting industry. Lorem Ipsum has
+            been the
+            industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
+            and
+            scrambled it to make a type specimen book. It has survived not only five centuries, but also the
+            leap
+            into
+            electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the
+            release of
+            Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software
+            like
+            Aldus PageMaker including versions of Lorem Ipsum.
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="form-group">
+        <div class="form-inline">
+            <div class="col-md-12">
+                <button ng-model="buttonAus" ng-disabled="evaluationButtonisDisabled" type="submit" class="btn btn-info">Auswerten</button>
+            </div>
+        </div>
+    </div>
 </div>
 <br>
-<div>
-    <form class="form">
-        <div class="row">
-            <div class="form-group">
-                <div class="form-inline">
-                    <div class="col-md-5">
-                        <div class="form-group">
-                            <span style="color: sandybrown">SPIRITUALITÄT</span>
-                        </div>
-                    </div>
-                    <div class="col-md-2">
-                        <div class="form-group ranks">
-                            <b>1</b>
-                        </div>
-                        <div class="form-group ranks">
-                            <b>2</b>
-                        </div>
-                        <div class="form-group ranks">
-                            <b>3</b>
-                        </div>
-                        <div class="form-group ranks">
-                            <b>4</b>
-                        </div>
-                        <div class="form-group ranks">
-                            <b>5</b>
-                        </div>
-                    </div>
+<div class="row">
+    <div class="form-group">
+        <div class="form-inline">
+            <div class="col-md-10">
+                <div class="form-group">
+                    <span style="color: sandybrown">SPIRITUALITÄT</span>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="form-group ranks">
+                    <b>1</b>
+                </div>
+                <div class="form-group ranks">
+                    <b>2</b>
+                </div>
+                <div class="form-group ranks">
+                    <b>3</b>
+                </div>
+                <div class="form-group ranks">
+                    <b>4</b>
+                </div>
+                <div class="form-group ranks">
+                    <b>5</b>
                 </div>
             </div>
         </div>
-        <div class="row">
-            <div class="form-group">
-                <div class="form-inline">
-                    <div class="form-group col-md-1">
-                        <label>1</label>
+    </div>
+</div>
+<div class="row">
+    <div class="form-group">
+        <div class="form-inline">
+            <div class="form-group col-md-1">
+                <label>1</label>
+            </div>
+            <div class="form-group col-md-9">
+                Mein Leben gründet sich auf etwas, das größer ist als die Teile in meinem Leben, als
+                Familie,
+                Beruf
+                oder Hobby, und das meinem Leben Sinn gibt.
+            </div>
+            <div class="col-md-2">
+                <div class="btn-group" data-toggle="radios">
+                    <div class="form-group ranks">
+                        <input type="radio" name="spirit_options_1" id="option1" ng-click="enableEvaluationButton()">
                     </div>
-                    <div class="form-group col-md-4">
-                        Mein Leben gründet sich auf etwas, das größer ist als die Teile in meinem Leben, als
-                        Familie,
-                        Beruf
-                        oder Hobby, und das meinem Leben Sinn gibt.
+                    <div class="form-group ranks">
+                        <input type="radio" name="spirit_options_1" id="option2">
                     </div>
-                    <div class="col-md-2">
-                        <div class="btn-group" data-toggle="radios">
-                            <div class="form-group ranks">
-                                <input type="radio" name="spirit_options_1" id="option1">
-                            </div>
-                            <div class="form-group ranks">
-                                <input type="radio" name="spirit_options_1" id="option2">
-                            </div>
-                            <div class="form-group ranks">
-                                <input type="radio" name="spirit_options_1" id="option3">
-                            </div>
-                            <div class="form-group ranks">
-                                <input type="radio" name="spirit_options_1" id="option4">
-                            </div>
-                            <div class="form-group ranks">
-                                <input type="radio" name="spirit_options_1" id="option5">
-                            </div>
-                        </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="spirit_options_1" id="option3">
                     </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="spirit_options_1" id="option4">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="spirit_options_1" id="option5">
+                    </div>
+                </div>
+            </div>
 
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="form-group">
+        <div class="form-inline">
+            <div class="form-group col-md-1">
+                <label>2</label>
+            </div>
+            <div class="form-group col-md-9">
+                Ich lebe und bin mit meinem ganzen Selbst im Hier und Jetzt.
+            </div>
+            <div class="col-md-2">
+                <div class="btn-group" data-toggle="radios">
+                    <div class="form-group ranks">
+                        <input type="radio" name="spirit_options_2" id="option1">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="spirit_options_2" id="option2">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="spirit_options_2" id="option3">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="spirit_options_2" id="option4">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="spirit_options_2" id="option5">
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="form-group">
-                <div class="form-inline">
-                    <div class="form-group col-md-1">
-                        <label>2</label>
-                    </div>
-                    <div class="form-group col-md-4">
-                        Ich lebe und bin mit meinem ganzen Selbst im Hier und Jetzt.
-                    </div>
-                    <div class="col-md-2">
-                        <div class="btn-group" data-toggle="radios">
-                            <div class="form-group ranks">
-                                <input type="radio" name="spirit_options_2" id="option1">
-                            </div>
-                            <div class="form-group ranks">
-                                <input type="radio" name="spirit_options_2" id="option2">
-                            </div>
-                            <div class="form-group ranks">
-                                <input type="radio" name="spirit_options_2" id="option3">
-                            </div>
-                            <div class="form-group ranks">
-                                <input type="radio" name="spirit_options_2" id="option4">
-                            </div>
-                            <div class="form-group ranks">
-                                <input type="radio" name="spirit_options_2" id="option5">
-                            </div>
-                        </div>
-                    </div>
 
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="form-group">
+        <div class="form-inline">
+            <div class="form-group col-md-1">
+                <label>3</label>
+            </div>
+            <div class="form-group col-md-9">
+                Ich kenne verschiedene Formen von Spiritualität und nehme mir regelmäßig Zeit, um Formen, die
+                für mich passen, auszuüben.
+            </div>
+            <div class="col-md-2">
+                <div class="btn-group" data-toggle="radios">
+                    <div class="form-group ranks">
+                        <input type="radio" name="spirit_options_3" id="option1">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="spirit_options_3" id="option2">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="spirit_options_3" id="option3">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="spirit_options_3" id="option4">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="spirit_options_3" id="option5">
+                    </div>
                 </div>
             </div>
-        </div>
-        <div class="row">
-            <div class="form-group">
-                <div class="form-inline">
-                    <div class="form-group col-md-1">
-                        <label>3</label>
-                    </div>
-                    <div class="form-group col-md-4">
-                        Ich kenne verschiedene Formen von Spiritualität und nehme mir regelmäßig Zeit, um Formen, die
-                        für mich passen, auszuüben.
-                    </div>
-                    <div class="col-md-2">
-                        <div class="btn-group" data-toggle="radios">
-                            <div class="form-group ranks">
-                                <input type="radio" name="spirit_options_3" id="option1">
-                            </div>
-                            <div class="form-group ranks">
-                                <input type="radio" name="spirit_options_3" id="option2">
-                            </div>
-                            <div class="form-group ranks">
-                                <input type="radio" name="spirit_options_3" id="option3">
-                            </div>
-                            <div class="form-group ranks">
-                                <input type="radio" name="spirit_options_3" id="option4">
-                            </div>
-                            <div class="form-group ranks">
-                                <input type="radio" name="spirit_options_3" id="option5">
-                            </div>
-                        </div>
-                    </div>
 
+        </div>
+    </div>
+</div>
+<br>
+
+<div class="row">
+    <div class="form-group">
+        <div class="form-inline">
+            <div class="col-md-10">
+                <div class="form-group">
+                    <span style="color: sandybrown">IDENTITÄT - GESCHICHTE</span>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="form-group ranks">
+                    <b>1</b>
+                </div>
+                <div class="form-group ranks">
+                    <b>2</b>
+                </div>
+                <div class="form-group ranks">
+                    <b>3</b>
+                </div>
+                <div class="form-group ranks">
+                    <b>4</b>
+                </div>
+                <div class="form-group ranks">
+                    <b>5</b>
                 </div>
             </div>
         </div>
-        <br>
-        <button type="submit" class="btn btn-default">Auswerten</button>
-    </form>
+    </div>
+</div>
+<div class="row">
+    <div class="form-group">
+        <div class="form-inline">
+            <div class="form-group col-md-1">
+                <label>4</label>
+            </div>
+            <div class="form-group col-md-9">
+                Ich weiß, welche familiäre Prägungen meine Herkunfstfamilie auf mich und mein Leben übertragen hat, und
+                ich kann versöhnt damit leben.
+            </div>
+            <div class="col-md-2">
+                <div class="btn-group" data-toggle="radios">
+                    <div class="form-group ranks">
+                        <input type="radio" name="id_ge_options_1" id="option1">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="id_ge_options_1" id="option2">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="id_ge_options_1" id="option3">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="id_ge_options_1" id="option4">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="id_ge_options_1" id="option5">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="form-group">
+        <div class="form-inline">
+            <div class="form-group col-md-1">
+                <label>5</label>
+            </div>
+            <div class="form-group col-md-9">
+                Ich kann benennen, welche Ereignisse und Begegnungen mich auf meinem Lebensweg geprägt haben.
+            </div>
+            <div class="col-md-2">
+                <div class="btn-group" data-toggle="radios">
+                    <div class="form-group ranks">
+                        <input type="radio" name="id_ge_options_2" id="option1">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="id_ge_options_2" id="option2">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="id_ge_options_2" id="option3">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="id_ge_options_2" id="option4">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="id_ge_options_2" id="option5">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="form-group">
+        <div class="form-inline">
+            <div class="form-group col-md-1">
+                <label>6</label>
+            </div>
+            <div class="form-group col-md-9">
+                Ich weiß, welche Einflüsse das Milieu und die Umgebung, in der ich aufgewachsen bin, auf mein Leben
+                haben.
+            </div>
+            <div class="col-md-2">
+                <div class="btn-group" data-toggle="radios">
+                    <div class="form-group ranks">
+                        <input type="radio" name="id_ge_options_3" id="option1">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="id_ge_options_3" id="option2">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="id_ge_options_3" id="option3">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="id_ge_options_3" id="option4">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="id_ge_options_3" id="option5">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+
+<div class="row">
+    <div class="form-group">
+        <div class="form-inline">
+            <div class="col-md-10">
+                <div class="form-group">
+                    <span style="color: sandybrown">IDENTITÄT - RESSOURCEN</span>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="form-group ranks">
+                    <b>1</b>
+                </div>
+                <div class="form-group ranks">
+                    <b>2</b>
+                </div>
+                <div class="form-group ranks">
+                    <b>3</b>
+                </div>
+                <div class="form-group ranks">
+                    <b>4</b>
+                </div>
+                <div class="form-group ranks">
+                    <b>5</b>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="form-group">
+        <div class="form-inline">
+            <div class="form-group col-md-1">
+                <label>7</label>
+            </div>
+            <div class="form-group col-md-9">
+                Ich weiß, welche Fähigkeiten mich am meisten motivieren und wie ich diese einsetzen kann.
+            </div>
+            <div class="col-md-2">
+                <div class="btn-group" data-toggle="radios">
+                    <div class="form-group ranks">
+                        <input type="radio" name="id_res_options_1" id="option1">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="id_res_options_1" id="option2">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="id_res_options_1" id="option3">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="id_res_options_1" id="option4">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="id_res_options_1" id="option5">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="form-group">
+        <div class="form-inline">
+            <div class="form-group col-md-1">
+                <label>8</label>
+            </div>
+            <div class="form-group col-md-9">
+                Ich kenne die Stärken meiner Persönnlichkeit, diese Stärken werden mir durch das Feedback meiner
+                Mitmenschen bestätigt.
+            </div>
+            <div class="col-md-2">
+                <div class="btn-group" data-toggle="radios">
+                    <div class="form-group ranks">
+                        <input type="radio" name="id_res_options_2" id="option1">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="id_res_options_2" id="option2">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="id_res_options_2" id="option3">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="id_res_options_2" id="option4">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="id_res_options_2" id="option5">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="form-group">
+        <div class="form-inline">
+            <div class="form-group col-md-1">
+                <label>9</label>
+            </div>
+            <div class="form-group col-md-9">
+                Ich habe eine klare Vorstellung davon, welches Umfeld meine Motivation fördert.
+            </div>
+            <div class="col-md-2">
+                <div class="btn-group" data-toggle="radios">
+                    <div class="form-group ranks">
+                        <input type="radio" name="id_res_options_3" id="option1">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="id_res_options_3" id="option2">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="id_res_options_3" id="option3">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="id_res_options_3" id="option4">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="id_res_options_3" id="option5">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+
+<div class="row">
+    <div class="form-group">
+        <div class="form-inline">
+            <div class="col-md-10">
+                <div class="form-group">
+                    <span style="color: sandybrown">IDENTITÄT - PERSPEKTIVE</span>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="form-group ranks">
+                    <b>1</b>
+                </div>
+                <div class="form-group ranks">
+                    <b>2</b>
+                </div>
+                <div class="form-group ranks">
+                    <b>3</b>
+                </div>
+                <div class="form-group ranks">
+                    <b>4</b>
+                </div>
+                <div class="form-group ranks">
+                    <b>5</b>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="form-group">
+        <div class="form-inline">
+            <div class="form-group col-md-1">
+                <label>10</label>
+            </div>
+            <div class="form-group col-md-9">
+                Ich kenne die wichtigsten persönlichen Werte in meinem Leben, diese bilden die Grundlage für meine
+                Entscheidungen.
+            </div>
+            <div class="col-md-2">
+                <div class="btn-group" data-toggle="radios">
+                    <div class="form-group ranks">
+                        <input type="radio" name="id_pers_options_1" id="option1">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="id_pers_options_1" id="option2">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="id_pers_options_1" id="option3">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="id_pers_options_1" id="option4">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="id_pers_options_1" id="option5">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="form-group">
+        <div class="form-inline">
+            <div class="form-group col-md-1">
+                <label>11</label>
+            </div>
+            <div class="form-group col-md-9">
+                Ich kenne meinen inneren Auftrag, er gibt meinem Leben die Grundrichtung.
+            </div>
+            <div class="col-md-2">
+                <div class="btn-group" data-toggle="radios">
+                    <div class="form-group ranks">
+                        <input type="radio" name="id_pers_options_2" id="option1">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="id_pers_options_2" id="option2">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="id_pers_options_2" id="option3">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="id_pers_options_2" id="option4">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="id_pers_options_2" id="option5">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="form-group">
+        <div class="form-inline">
+            <div class="form-group col-md-1">
+                <label>12</label>
+            </div>
+            <div class="form-group col-md-9">
+                Ich bin dankbar für die Träume, die sich in meinem Leben verwirklicht haben.
+            </div>
+            <div class="col-md-2">
+                <div class="btn-group" data-toggle="radios">
+                    <div class="form-group ranks">
+                        <input type="radio" name="id_pers_options_3" id="option1">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="id_pers_options_3" id="option2">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="id_pers_options_3" id="option3">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="id_pers_options_3" id="option4">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="id_pers_options_3" id="option5">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+
+<div class="row">
+    <div class="form-group">
+        <div class="form-inline">
+            <div class="col-md-10">
+                <div class="form-group">
+                    <span style="color: sandybrown">AUFTRAG - GESTALTEN</span>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="form-group ranks">
+                    <b>1</b>
+                </div>
+                <div class="form-group ranks">
+                    <b>2</b>
+                </div>
+                <div class="form-group ranks">
+                    <b>3</b>
+                </div>
+                <div class="form-group ranks">
+                    <b>4</b>
+                </div>
+                <div class="form-group ranks">
+                    <b>5</b>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="form-group">
+        <div class="form-inline">
+            <div class="form-group col-md-1">
+                <label>13</label>
+            </div>
+            <div class="form-group col-md-9">
+                Ich bin mir sicher, welche Bereiche meines Lebens ich gestalten soll (Beruf, Ehrenamt ...) und welche
+                nicht.
+            </div>
+            <div class="col-md-2">
+                <div class="btn-group" data-toggle="radios">
+                    <div class="form-group ranks">
+                        <input type="radio" name="auf_ges_options_1" id="option1">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="auf_ges_options_1" id="option2">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="auf_ges_options_1" id="option3">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="auf_ges_options_1" id="option4">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="auf_ges_options_1" id="option5">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="form-group">
+        <div class="form-inline">
+            <div class="form-group col-md-1">
+                <label>14</label>
+            </div>
+            <div class="form-group col-md-9">
+                Ich habe eine Vorstellung davon, was ich in den nächsten fünf bis zehn Jahren durch mein Wirken
+                gestalten will.
+            </div>
+            <div class="col-md-2">
+                <div class="btn-group" data-toggle="radios">
+                    <div class="form-group ranks">
+                        <input type="radio" name="auf_ges_options_2" id="option1">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="auf_ges_options_2" id="option2">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="auf_ges_options_2" id="option3">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="auf_ges_options_2" id="option4">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="auf_ges_options_2" id="option5">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="form-group">
+        <div class="form-inline">
+            <div class="form-group col-md-1">
+                <label>15</label>
+            </div>
+            <div class="form-group col-md-9">
+                Mein Handeln ist geprägt durch klare Visionen und umsetztbare Strategien.
+            </div>
+            <div class="col-md-2">
+                <div class="btn-group" data-toggle="radios">
+                    <div class="form-group ranks">
+                        <input type="radio" name="auf_ges_options_3" id="option1">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="auf_ges_options_3" id="option2">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="auf_ges_options_3" id="option3">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="auf_ges_options_3" id="option4">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="auf_ges_options_3" id="option5">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+
+<div class="row">
+    <div class="form-group">
+        <div class="form-inline">
+            <div class="col-md-10">
+                <div class="form-group">
+                    <span style="color: sandybrown">AUFTRAG - FREUND SEIN</span>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="form-group ranks">
+                    <b>1</b>
+                </div>
+                <div class="form-group ranks">
+                    <b>2</b>
+                </div>
+                <div class="form-group ranks">
+                    <b>3</b>
+                </div>
+                <div class="form-group ranks">
+                    <b>4</b>
+                </div>
+                <div class="form-group ranks">
+                    <b>5</b>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="form-group">
+        <div class="form-inline">
+            <div class="form-group col-md-1">
+                <label>16</label>
+            </div>
+            <div class="form-group col-md-9">
+                Ich unterstütze gerne meine Mitmenschen und habe dabei keine Angst, zu kurz zu kommen.
+            </div>
+            <div class="col-md-2">
+                <div class="btn-group" data-toggle="radios">
+                    <div class="form-group ranks">
+                        <input type="radio" name="auf_frs_options_1" id="option1">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="auf_frs_options_1" id="option2">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="auf_frs_options_1" id="option3">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="auf_frs_options_1" id="option4">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="auf_frs_options_1" id="option5">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="form-group">
+        <div class="form-inline">
+            <div class="form-group col-md-1">
+                <label>17</label>
+            </div>
+            <div class="form-group col-md-9">
+                Ich möchte in meiner Beziehungskompetenz (Empatisch zuhören, Wertschätzung und Respekt zeigen,
+                konstruktiv mit Konflikten umgehen, ...) wachsen und arbeite beständig daran.
+            </div>
+            <div class="col-md-2">
+                <div class="btn-group" data-toggle="radios">
+                    <div class="form-group ranks">
+                        <input type="radio" name="auf_frs_options_2" id="option1">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="auf_frs_options_2" id="option2">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="auf_frs_options_2" id="option3">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="auf_frs_options_2" id="option4">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="auf_frs_options_2" id="option5">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="form-group">
+        <div class="form-inline">
+            <div class="form-group col-md-1">
+                <label>18</label>
+            </div>
+            <div class="form-group col-md-9">
+                Ich pflege mein Beziehungsnetzwerk (Familie, Freunde, Kollegen, ...) und gebe ihm eine Priorität in
+                meinem Leben.
+            </div>
+            <div class="col-md-2">
+                <div class="btn-group" data-toggle="radios">
+                    <div class="form-group ranks">
+                        <input type="radio" name="auf_frs_options_3" id="option1">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="auf_frs_options_3" id="option2">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="auf_frs_options_3" id="option3">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="auf_frs_options_3" id="option4">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="auf_frs_options_3" id="option5">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+
+<div class="row">
+    <div class="form-group">
+        <div class="form-inline">
+            <div class="col-md-10">
+                <div class="form-group">
+                    <span style="color: sandybrown">AUFTRAG - BEI MIR SELBST SEIN</span>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="form-group ranks">
+                    <b>1</b>
+                </div>
+                <div class="form-group ranks">
+                    <b>2</b>
+                </div>
+                <div class="form-group ranks">
+                    <b>3</b>
+                </div>
+                <div class="form-group ranks">
+                    <b>4</b>
+                </div>
+                <div class="form-group ranks">
+                    <b>5</b>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="form-group">
+        <div class="form-inline">
+            <div class="form-group col-md-1">
+                <label>19</label>
+            </div>
+            <div class="form-group col-md-9">
+                Ich bin achtsam mir selbst gegenüber, ich nehme meine Gefühle wahr und erkenne Bedürfnisse die damit
+                verbunden sind.
+            </div>
+            <div class="col-md-2">
+                <div class="btn-group" data-toggle="radios">
+                    <div class="form-group ranks">
+                        <input type="radio" name="auf_bms_options_1" id="option1">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="auf_bms_options_1" id="option2">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="auf_bms_options_1" id="option3">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="auf_bms_options_1" id="option4">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="auf_bms_options_1" id="option5">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="form-group">
+        <div class="form-inline">
+            <div class="form-group col-md-1">
+                <label>20</label>
+            </div>
+            <div class="form-group col-md-9">
+                Ich weiß, was für meinen Körper gut ist, und schaffe regelmäßig Zeiträume für Aktivität und Entspannung.
+            </div>
+            <div class="col-md-2">
+                <div class="btn-group" data-toggle="radios">
+                    <div class="form-group ranks">
+                        <input type="radio" name="auf_bms_options_2" id="option1">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="auf_bms_options_2" id="option2">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="auf_bms_options_2" id="option3">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="auf_bms_options_2" id="option4">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="auf_bms_options_2" id="option5">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="form-group">
+        <div class="form-inline">
+            <div class="form-group col-md-1">
+                <label>21</label>
+            </div>
+            <div class="form-group col-md-9">
+                Es ist mir bewusst, welche Gedankenmuster mein Leben begleiten, und weiß, wie ich mit ihnen umgehen
+                kann.
+            </div>
+            <div class="col-md-2">
+                <div class="btn-group" data-toggle="radios">
+                    <div class="form-group ranks">
+                        <input type="radio" name="auf_bms_options_3" id="option1">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="auf_bms_options_3" id="option2">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="auf_bms_options_3" id="option3">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="auf_bms_options_3" id="option4">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="auf_bms_options_3" id="option5">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+
+<div class="row">
+    <div class="form-group">
+        <div class="form-inline">
+            <div class="col-md-10">
+                <div class="form-group">
+                    <span style="color: sandybrown">AUFTRAG - LERNEN</span>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="form-group ranks">
+                    <b>1</b>
+                </div>
+                <div class="form-group ranks">
+                    <b>2</b>
+                </div>
+                <div class="form-group ranks">
+                    <b>3</b>
+                </div>
+                <div class="form-group ranks">
+                    <b>4</b>
+                </div>
+                <div class="form-group ranks">
+                    <b>5</b>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="form-group">
+        <div class="form-inline">
+            <div class="form-group col-md-1">
+                <label>22</label>
+            </div>
+            <div class="form-group col-md-9">
+                Ich bin bereit und willig zu lernen.
+            </div>
+            <div class="col-md-2">
+                <div class="btn-group" data-toggle="radios">
+                    <div class="form-group ranks">
+                        <input type="radio" name="auf_ler_options_1" id="option1">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="auf_ler_options_1" id="option2">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="auf_ler_options_1" id="option3">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="auf_ler_options_1" id="option4">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="auf_ler_options_1" id="option5">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="form-group">
+        <div class="form-inline">
+            <div class="form-group col-md-1">
+                <label>23</label>
+            </div>
+            <div class="form-group col-md-9">
+                Ich kenne meine wichtigsten fachlichen Kompetenzen, ich möchte sie entwickeln und formuliere dazu klare
+                Ziele.
+            </div>
+            <div class="col-md-2">
+                <div class="btn-group" data-toggle="radios">
+                    <div class="form-group ranks">
+                        <input type="radio" name="auf_ler_options_2" id="option1">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="auf_ler_options_2" id="option2">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="auf_ler_options_2" id="option3">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="auf_ler_options_2" id="option4">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="auf_ler_options_2" id="option5">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="form-group">
+        <div class="form-inline">
+            <div class="form-group col-md-1">
+                <label>24</label>
+            </div>
+            <div class="form-group col-md-9">
+                Ich weiß, dass mein Charakter großen Einfluss auf ein wertvolles Leben hat, und arbeite daran,
+                Untugenden in Tugenden zu wandeln.
+            </div>
+            <div class="col-md-2">
+                <div class="btn-group" data-toggle="radios">
+                    <div class="form-group ranks">
+                        <input type="radio" name="auf_ler_options_3" id="option1">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="auf_ler_options_3" id="option2">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="auf_ler_options_3" id="option3">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="auf_ler_options_3" id="option4">
+                    </div>
+                    <div class="form-group ranks">
+                        <input type="radio" name="auf_ler_options_3" id="option5">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</form>
 </div>
