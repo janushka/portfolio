@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('portfolioApp')
-    .controller('WorkshopCtrl', function ($scope) {
+    .controller('WorkshopCtrl', function ($scope, toaster) {
         var rbNumbs = createInitScoreArray(24);
 
         $scope.myName = 'Marc Njoku';
@@ -23,10 +23,22 @@ angular.module('portfolioApp')
 
         $scope.calculateScore = function () {
             var score = 0;
-            rbNumbs.forEach(function (numb) {
-                score += numb;
-            });
-            console.log('The score = ' + score);
+
+            for (var i = 0; i < rbNumbs.length; i++) {
+                if (rbNumbs[i] == 0) {
+                    toaster.pop('error', "Fehler", "Sie haben ein oder mehrere Felder nicht ausgewertet.");
+                    score = 0;
+                    break;
+                }
+                else {
+                    score += rbNumbs[i];
+                }
+            }
+
+            if (score != 0) {
+                toaster.pop('success', 'Auswertung', 'Sie haben insgesamt ' + score + ' Punkte erzielt.');
+                console.log('The score = ' + score);
+            }
         };
     });
 
