@@ -4,6 +4,25 @@ angular.module('portfolioApp')
     .controller('WorkshopCtrl', function ($scope, toaster) {
         var rbNumbs = createInitScoreArray(24);
 
+        //$scope.data = [5, 10, 20, 45, 6, 30];
+        $scope.data = {
+            spiritualitaet_1: [1, 1, 1, 1, 1, 1, 1],
+            spiritualitaet_2: [1, 1, 1, 1, 1, 1, 1],
+            spiritualitaet_3: [1, 1, 1, 1, 1, 1, 1],
+            spiritualitaet_4: [1, 1, 1, 1, 1, 1, 1],
+            spiritualitaet_5: [1, 1, 1, 1, 1, 1, 1],
+            identitaet_1: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+            identitaet_2: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+            identitaet_3: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+            identitaet_4: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+            identitaet_5: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+            auftrag_1: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+            auftrag_2: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+            auftrag_3: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+            auftrag_4: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1],
+            auftrag_5: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+        };
+
         $scope.myName = 'Marc Njoku';
         $scope.buttonAus = 'workshop';
 
@@ -32,6 +51,7 @@ angular.module('portfolioApp')
                 }
                 else {
                     score += rbNumbs[i];
+                    $scope.data[i] = parseInt(rbNumbs[i]);
                 }
             }
 

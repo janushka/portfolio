@@ -6,7 +6,8 @@ angular
         'ngResource',
         'ngSanitize',
         'ngRoute',
-        'toaster'
+        'toaster',
+
     ])
     .config(function ($routeProvider) {
         $routeProvider

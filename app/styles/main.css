@@ -82,3 +82,80 @@ body {
 .ranks {
     width: 15px;
 }
+
+body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: auto;
+    position: relative;
+    width: 960px;
+}
+
+.arc {
+    stroke: #91A2B7;
+    stroke-width: 1px;
+}
+
+.arc_dashed {
+    stroke: #91A2B7;
+    stroke-width: 0.5px;
+    stroke-dasharray: 3, 5;
+}
+
+.arc_transparent {
+    stroke: #DDDBE0;
+}
+
+text {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    /*font-size: 9px;*/
+    color: white;
+    font-weight: bold;
+}
+
+.auftrag {
+    font-size: 9px;
+    font-weight: bold;
+}
+
+.identitaet {
+    font-size: 8px;
+    font-weight: bold;
+}
+
+.spiritualitaet {
+    font-size: 7px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.label_dunkelgrau {
+    font-family: "Arial Black", Arial, Helvetica, sans-serif;
+    font-size: 7px;
+    font-weight: bold;
+}
+
+.label_dunkelgrau_g {
+    font-family: "Arial Black", Arial, Helvetica, sans-serif;
+    font-size: 9px;
+    font-weight: bold;
+}
+
+.label_hellgrau_g {
+    font-family: "Arial Black", Arial, Helvetica, sans-serif;
+    font-size: 9px;
+    font-weight: bold;
+}
+
+.text_spiritualitaet {
+    background-color: #A9B1C3;
+}
+
+svg {
+    text-rendering: auto;
+    /* options are
+    text-rendering: auto;
+    text-rendering: optimizeSpeed;
+    text-rendering: optimizeLegibility;
+    text-rendering: geometricPrecision;
+       */
+}
