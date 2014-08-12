@@ -4,7 +4,6 @@ angular.module('portfolioApp')
     .controller('WorkshopCtrl', function ($scope, toaster) {
         var rbNumbs = createInitScoreArray(24);
 
-        //$scope.data = [5, 10, 20, 45, 6, 30];
         $scope.data = {
             spiritualitaet_1: [1, 1, 1, 1, 1, 1, 1],
             spiritualitaet_2: [1, 1, 1, 1, 1, 1, 1],
@@ -46,10 +45,12 @@ angular.module('portfolioApp')
             for (var i = 0; i < rbNumbs.length; i++) {
                 if (rbNumbs[i] == 0) {
                     toaster.pop('error', "Fehler", "Sie haben ein oder mehrere Felder nicht ausgewertet.");
+                    $scope.evalcomplete = 'EVCPL';
                     score = 0;
                     break;
                 }
                 else {
+                    //$scope.bwert += 'bwert';
                     score += rbNumbs[i];
                     $scope.data[i] = parseInt(rbNumbs[i]);
                 }
