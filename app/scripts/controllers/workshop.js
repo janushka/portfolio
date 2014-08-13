@@ -4,6 +4,8 @@ angular.module('portfolioApp')
     .controller('WorkshopCtrl', function ($scope, toaster) {
         var rbNumbs = createInitScoreArray(24);
 
+        initRadioButtons();
+
         $scope.data = {
             spiritualitaet_1: [1, 1, 1, 1, 1, 1, 1],
             spiritualitaet_2: [1, 1, 1, 1, 1, 1, 1],
@@ -25,9 +27,8 @@ angular.module('portfolioApp')
         $scope.myName = 'Marc Njoku';
         $scope.buttonAus = 'workshop';
 
-        $scope.count1 = 0, $scope.count2 = 0, $scope.count3 = 0, $scope.count4 = 0, $scope.count5 = 0, $scope.count6 = 0, $scope.count7 = 0, $scope.count8 = 0,
-            $scope.count9 = 0, $scope.count10 = 0, $scope.count11 = 0, $scope.count12 = 0, $scope.count13 = 0, $scope.count14 = 0, $scope.count15 = 0, $scope.count16 = 0,
-            $scope.count17 = 0, $scope.count18 = 0, $scope.count19 = 0, $scope.count20 = 0, $scope.count21 = 0, $scope.count22 = 0, $scope.count23 = 0, $scope.count24 = 0;
+        $scope.reset = 'not_reset';
+        $scope.score = 0;
 
         $scope.evaluationButtonisDisabled = true;
         $scope.enableEvaluationButton = function (rbName, rbNumb) {
@@ -45,22 +46,39 @@ angular.module('portfolioApp')
             for (var i = 0; i < rbNumbs.length; i++) {
                 if (rbNumbs[i] == 0) {
                     toaster.pop('error', "Fehler", "Sie haben ein oder mehrere Felder nicht ausgewertet.");
-                    $scope.evalcomplete = 'EVCPL';
                     score = 0;
                     break;
                 }
                 else {
-                    //$scope.bwert += 'bwert';
                     score += rbNumbs[i];
-                    $scope.data[i] = parseInt(rbNumbs[i]);
+                    //$scope.data[i] = parseInt(rbNumbs[i]);
                 }
             }
+
+            $scope.reset = 'not_reset';
 
             if (score != 0) {
                 toaster.pop('success', 'Auswertung', 'Sie haben insgesamt ' + score + ' Punkte erzielt.');
                 console.log('The score = ' + score);
+
+                $scope.score = score;
+                $scope.evaluation = rbNumbs;
+                $scope.reset = 'not_reset';
             }
         };
+
+        $scope.resetAll = function () {
+            $scope.score = 0;
+            $scope.reset = 'reset';
+            $scope.evaluationButtonisDisabled = true;
+            initRadioButtons();
+        };
+
+        function initRadioButtons() {
+            $scope.count1 = 0, $scope.count2 = 0, $scope.count3 = 0, $scope.count4 = 0, $scope.count5 = 0, $scope.count6 = 0, $scope.count7 = 0, $scope.count8 = 0,
+                $scope.count9 = 0, $scope.count10 = 0, $scope.count11 = 0, $scope.count12 = 0, $scope.count13 = 0, $scope.count14 = 0, $scope.count15 = 0, $scope.count16 = 0,
+                $scope.count17 = 0, $scope.count18 = 0, $scope.count19 = 0, $scope.count20 = 0, $scope.count21 = 0, $scope.count22 = 0, $scope.count23 = 0, $scope.count24 = 0;
+        }
     });
 
 function createInitScoreArray(length) {
