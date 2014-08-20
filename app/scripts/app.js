@@ -19,6 +19,10 @@ angular
                 templateUrl: 'views/workshop.html',
                 controller: 'WorkshopCtrl'
             })
+            .when('/suchmaschine', {
+                templateUrl: 'views/searchengine.html',
+                controller: 'SearchengineCtrl'
+            })
             .otherwise({
                 redirectTo: '/'
             });
